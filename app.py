@@ -90,7 +90,7 @@ def submit():
             google_maps_link = 'Unknown'
 
         # Create log entry
-        with open("/mnt/data/admin_log.txt", "a") as log_file:
+        with open("admin_log.txt", "a") as log_file:
             log_file.write(f"Time: {datetime.now()}, IP: {user_ip}, Latitude: {latitude}, Longitude: {longitude}, Google Maps: {google_maps_link}\n")
     except Exception as e:
         return f"Error logging data: {e}"
